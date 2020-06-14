@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<script>  
+function validateform(){  
+var name=document.myform.uname.value;  
+var password=document.myform.pass.value;
+var email=document.myform.email.value;
+  
+if (name==null || name==""){  
+  alert("Please enter Name");  
+  return false;  
+}
+else if(email==null || email==""){  
+	  alert("Please enter email..");  
+	  return false;  
+	  }
+else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }
+else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.email.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+  
+</script>
+<link rel="stylesheet" type="text/css" href="ak.css">
+
+</head>
+<body>
+<div class="top">
+      
+    <img src="logo.jpg" align="left" width="8%">
+        <h1><center><p style="color:yellow">Sanjivani College of Engineering,Kopargaon</p></center></h1>
+    <h2><p style="color:white"><marquee direction="left">Student Grievance System</marquee></p></h2>
+   </div>
+
+    <div class="fixed-header">
+       
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="register.html">Registration</a>
+                <a href="login.html#container1">Login</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="admin.html">admin login</a>
+            </nav>
+       
+        
+    </div>
+    <div>
+        <form action="register.jsp" method="Post" name="myform" onsubmit="return validateform()" id="regform"> 
+        <h1>Registration form</h1>
+         Name:     <input type="text" name="uname"><br><br> 
+         Email:    <input type="email" name="email"><br><br>
+          Password: <input type="password" name="pass"><br><br> 
+            
+          <label for="class">Choose your class:</label>
+          <select id="class" name="class" form="regform">
+                    <option value="FY">First year</option>
+                    <option value="SE">Second Year</option>
+                    <option value="TE">Third Year</option>
+                    <option value="BE">Final Year</option>
+          </select><br><br>
+          <label for="dept">Choose your Department:</label>
+          <select id="dept" name="dept" form="regform">
+                    <option value="Computer">Computer</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                    <option value="IT">Information technology</option>
+                    <option value="E & TC">E & TC</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="First year">First Year</option>
+                   
+          </select><br><br>
+         <input type="reset" value="reset">  
+         <input type="submit" value="register"> 
+        </form>
+        Already Registered ::<a href="login.html">login</a>
+        </div>
+        <div class="fixed-footer">
+        <div class="container"><center>Copyright &copy; to Akash Kasliwal</center></div>        
+    </div>
+</body>
+</html>

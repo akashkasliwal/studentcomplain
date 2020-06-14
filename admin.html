@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<script>  
+function validateadmin(){  
+	var username=document.loginForm.username.value;  
+	var password=document.loginForm.password.value;  
+	  
+	if (username==null || username==""){  
+	  alert("Email can't be blank..."); 
+
+	  return false;  
+	}
+	else if(password==null || password==""){  
+		  alert("Password field cant be blank....");  
+		  return false;  
+		  }
+	else if(password.length<6){  
+			  alert("Password must be at least 6 characters long.");  
+			  return false;  
+			  }
+	return true;
+	}  
+  
+</script>
+<link rel="stylesheet" type="text/css" href="ak.css">
+
+</head>
+<body>
+<div class="top">
+      
+    <img src="logo.jpg" align="left" width="8%">
+        <h1><center><p style="color:yellow">Sanjivani College of Engineering,Kopargaon</p></center></h1>
+    <h2><p style="color:white"><marquee direction="left">Student Grievance System</marquee></p></h2>
+   </div>
+
+    <div class="fixed-header">
+       
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="register.html">Registration</a>
+                <a href="login.html#container1">Login</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="admin.html">admin login</a>
+            </nav>
+       
+        
+    </div>
+    <div>
+        <form name="loginForm" method="post" action="adminlogin.jsp" onsubmit="return validateadmin()">
+<h1>AdminLogin</h1>
+         User Name:     <input type="text" name="username"><br/>  
+         Password: <input type="password" name="password"><br/> 
+        <!--  <label for="class">Choose your class:</label>
+          <select id="class" name="class" form="regform">
+                    <option value="FY">First year</option>
+                    <option value="SE">Second Year</option>
+                    <option value="TE">Third Year</option>
+                    <option value="BE">Final Year</option>
+          </select><br><br>-->
+         <input type="reset" value="reset">  
+         <input type="submit" value="login"> <br/>
+
+</form>
+        </div>
+        <div class="fixed-footer">
+        <div class="container"><center>Copyright &copy; to Akash Kasliwal</center></div>        
+    </div>
+</body>
+</html>
